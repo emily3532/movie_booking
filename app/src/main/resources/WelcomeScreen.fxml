@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.5" prefHeight="400.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: yellow;">
+               <children>
+                  <GridPane layoutX="48.0" layoutY="58.0" prefHeight="178.0" prefWidth="200.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="99.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="101.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="101.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="keypad_0" mnemonicParsing="false" onMouseClicked="#onKeypad0Click" prefHeight="60.0" prefWidth="74.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button fx:id="keypad_1" mnemonicParsing="false" onMouseClicked="#onKeypad1Click" prefHeight="60.0" prefWidth="74.0" text="1" />
+                        <Button fx:id="keypad_2" mnemonicParsing="false" onMouseClicked="#onKeypad2Click" prefHeight="60.0" prefWidth="74.0" text="2" GridPane.columnIndex="1" />
+                        <Button fx:id="keypad_3" mnemonicParsing="false" onMouseClicked="#onKeypad3Click" prefHeight="60.0" prefWidth="74.0" text="3" GridPane.columnIndex="2" />
+                        <Button fx:id="keypad_4" mnemonicParsing="false" onMouseClicked="#onKeypad4Click" prefHeight="60.0" prefWidth="74.0" text="4" GridPane.rowIndex="1" />
+                        <Button fx:id="keypad_6" mnemonicParsing="false" onMouseClicked="#onKeypad6Click" prefHeight="60.0" prefWidth="74.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="keypad_7" mnemonicParsing="false" onMouseClicked="#onKeypad7Click" prefHeight="60.0" prefWidth="74.0" text="7" GridPane.rowIndex="2" />
+                        <Button fx:id="keypad_9" mnemonicParsing="false" onMouseClicked="#onKeypad9Click" prefHeight="60.0" prefWidth="74.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button fx:id="keypad_5" mnemonicParsing="false" onMouseClicked="#onKeypad5Click" prefHeight="60.0" prefWidth="74.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="keypad_8" mnemonicParsing="false" onMouseClicked="#onKeypad8Click" prefHeight="60.0" prefWidth="74.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <TextField fx:id="password_text_display" editable="false" layoutX="63.0" layoutY="277.0" />
+                  <Button fx:id="password_cancel_button" layoutX="194.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#onPasswordCancelClick" prefHeight="30.0" prefWidth="54.0" text="Clear" />
+                  <Button fx:id="password_ok_button" layoutX="27.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#onPasswordOkClick" prefHeight="30.0" prefWidth="112.0" text="Validate" />
+               </children>
+               <effect>
+                  <Blend />
+               </effect>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane orientation="VERTICAL" prefHeight="398.0" prefWidth="296.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <Label layoutX="8.0" layoutY="14.0" prefHeight="123.0" prefWidth="280.0" text="Welcome to a very bad ATM machine. How many we not serve you?" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="DejaVu Sans Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="card_text_field" editable="false" layoutX="28.0" layoutY="272.0" prefHeight="26.0" prefWidth="240.0" />
+                              <Text layoutX="27.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type your Card number:" wrappingWidth="240.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="validate_card_button" layoutX="28.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#onValidateCardClick" prefHeight="45.0" prefWidth="112.0" text="Confirm Card" />
+                              <Button fx:id="admin_login_button" layoutX="151.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#onAdminLoginClick" prefHeight="44.0" prefWidth="120.0" text="Admin Login" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

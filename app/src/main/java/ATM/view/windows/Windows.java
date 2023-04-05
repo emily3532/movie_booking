@@ -1,0 +1,15 @@
+package ATM.view.windows;
+
+public enum Windows {
+
+    WELCOME_SCREEN,
+    TRANSACTION_SCREEN,
+    WITHDRAW_MONEY,
+    DISPENSING_CASH,
+    DEPOSIT_MONEY,
+    CHECK_BALANCE,
+    TRANSACTION,
+    ERROR,
+    CARD_OUT,
+    LOADING
+}

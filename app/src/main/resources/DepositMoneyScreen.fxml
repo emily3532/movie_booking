@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="ok_button" layoutX="174.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#onOkClick" text="OK" />
+      <Button fx:id="cancel_button" layoutX="368.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#onCancelClick" text="Cancel" />
+      <TextField fx:id="deposit_amount_field" layoutX="215.0" layoutY="143.0" />
+      <TextField editable="false" layoutX="181.0" layoutY="143.0" prefHeight="24.0" prefWidth="24.0" text="\$" />
+   </children>
+</AnchorPane>
